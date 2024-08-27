@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   server:
     image: ${DOCKER_HUB_USERNAME}/wns-deploy-server
