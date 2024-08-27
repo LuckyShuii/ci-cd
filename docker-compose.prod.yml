@@ -1,6 +1,6 @@
 services:
   server:
-    image: ${DOCKER_HUB_USERNAME}/wns-deploy-server
+    image: lucasboillot/wns-deploy-server
     command: sh -c "npm run build && npm run prod"
     expose:
       - 5000
@@ -10,7 +10,7 @@ services:
     depends_on:
       - mongodb
   client:
-    image: ${DOCKER_HUB_USERNAME}/wns-deploy-server
+    image: lucasboillot/wns-deploy-server
     command: sh -c "npm run build"
     volumes:
       - web-client-build:/app/build
